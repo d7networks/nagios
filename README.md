@@ -1,4 +1,4 @@
-#Nagios SMS Plugin
+# Nagios SMS Plugin
 
 Python script for sending SMS notifications in nagios using direct7 sms gateway.
 
