@@ -34,7 +34,7 @@
 
 
 # Add a pager number to your contacts, make sure it has the international prefix
-#you can get the latest version of this script from GUTHUB :
+#you can get the latest version of this script from GUTHUB : https://github.com/d7networks/nagios
 # For all queries and help on installation please contact support@d7networks.com
 
 import argparse
