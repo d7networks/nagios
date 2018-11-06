@@ -7,12 +7,13 @@ These instructions will get you a copy of the script and configuration guideline
 
 ##Prerequisites
 
-Before starting nagios setup make sure you have a valid subscription on http://sms.d7networks.com. Please contact support@d7networks.com if you need to test the plugin.
+Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you have a valid subscription on http://sms.d7networks.com. Please contact support@d7networks.com if you need to test the plugin.
 
 
 ### Nagios Setup
 
-Copy this file to your Nagios plugin folder
+
+Copy d7sms.py to your Nagios plugin folder and make it executable.
 
 ```
 Debian/Ubuntu: /usr/local/nagios/libexec
