@@ -5,7 +5,7 @@ Python script for sending SMS notifications in nagios using direct7 sms gateway.
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in nagios
 
-##Prerequisites
+## Prerequisites
 
 Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you have a valid subscription on http://sms.d7networks.com. Please contact support@d7networks.com if you need to test the plugin.
 
