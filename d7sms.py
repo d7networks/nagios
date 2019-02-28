@@ -76,4 +76,4 @@ if __name__ == '__main__':
                 'content': content
             }
             # Send an SMS-MT to d7 sms gateway
-            urlopen("http://sms.d7networks.com:1401/send?%s" % urlencode(baseParams)).read()
+            urlopen("http://smsc.d7networks.com:1401/send?%s" % urlencode(baseParams)).read()
