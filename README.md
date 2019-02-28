@@ -11,7 +11,7 @@ Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you
 
 Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
-## ======== Installation Instructions ======== 
+### Installation Instructions
 1. Nagios Setup
 
 
@@ -51,7 +51,7 @@ You can collect your API_Username and API_Password from https://d7networks.com a
 
 4. Add a pager number to your contacts, make sure it has the international prefix
 
-## ======== Support and Help ======== 
+### Support and Help
 
 You can get the latest version of this script from https://github.com/d7networks/nagios 
 
