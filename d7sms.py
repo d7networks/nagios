@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you have a valid subscription on http://sms.d7networks.com. Please contact support@d7networks.com if you need to test the plugin.
+# Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you have a valid subscription on https://d7networks.com. Please contact support@d7networks.com if you need to test the plugin.
 
 #------------------ Nagios Setup -------------------
 
