@@ -15,7 +15,7 @@ Please contact nagios@d7networks.com or signup at https://d7networks.com for FRE
 1. Nagios Setup
 
 
-Copy d7sms.py to your Nagios plugins folder and make it executable. You can download it from https://github.com/d7networks/nagios/blob/master/d7sms.py 
+Copy d7sms.py to your nagios plugins folder and make it executable. You can download it from https://github.com/d7networks/nagios/blob/master/d7sms.py 
 
 ```
 Following the location of plugins folder in different Operating Systems. 
