@@ -44,7 +44,7 @@ You can collect your API_Username and API_Password from https://d7networks.com a
 3. Update contact template and add below commands after existing host and service notification commands.
 
 ```
-   Default path : /usr/local/nagios/etc/objects/contacts.cfg
+   Default path : /usr/local/nagios/etc/objects/templates.cfg
    service_notification_commands   notify-service-by-email,service-notify-by-sms
        host_notification_commands      notify-host-by-email,host-notify-by-sms
 ```
