@@ -11,7 +11,7 @@ Before starting make sure you have a valid subscription on https://d7networks.co
 Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
 ## Installation Instructions
-1. Nagios Setup   
+#### 1. Nagios Setup   
 
 Copy d7sms.py to your nagios plugins folder and make it executable
 ```
@@ -20,12 +20,12 @@ wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
 chmod +x d7sms.py
 ```
 
-2. Test extension
+###### 2. Test extension
 ```
 ./d7sms.py --username API_Username --password API_Password --to Mobile_Number --content "test"
 ```
 
-3. Add notification commands
+###### 3. Add notification commands
 
 Procedure: On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
 Important: Here you must replace API_Username and API_Password with the one you recieved from our website.    
@@ -88,7 +88,7 @@ You can get the latest version of this script from https://github.com/d7networks
 
 For all queries and help on installation please contact nagios@d7networks.com or visit https://d7networks.com
 
-## Common queies and solutions: 
+## Common queries and solutions: 
 Q1: How to Limit number of notifications: 
 
 Ans: There are two options you can follow to limit the notifications: 
