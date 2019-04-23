@@ -56,3 +56,5 @@ You can collect your API_Username and API_Password from https://d7networks.com a
 You can get the latest version of this script from https://github.com/d7networks/nagios 
 
 For all queries and help on installation please contact nagios@d7networks.com or visit https://d7networks.com
+
+Setup instructions for NagiosXI can be found here: https://github.com/d7networks/nagios/blob/master/Configure-NagiosXI.md
