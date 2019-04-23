@@ -28,7 +28,7 @@ chmod +x d7sms.py
 3. Add notification commands
 
 Procedure: On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
-Importnant: Here you must replace API_Username and API_Password with the one you recieved from our website.    
+Important: Here you must replace API_Username and API_Password with the one you recieved from our website.    
 Configure > Core Config Manager > Commands > Add new
 ```
 Command Name:   service-notify-by-sms
