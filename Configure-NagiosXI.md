@@ -30,6 +30,7 @@ chmod +x d7sms.py
 3. Add notification commands
 
 Procedure: On Nagios XI  - GUI, Navigate to following path and add two commands seperately
+Importnant: Here you must replace API_Username and API_Password with the one you recieved from our website. 
 
 Configure > Core Config Manager > Commands > Add new
 ```
@@ -93,4 +94,4 @@ Ans: There are two options you can follow to limit the notifications:
      
      1. Setting the notification_interval directive in either the host or service definitions to 0. Doing this tells Nagios not to resend notifications for the same event. 
      
-     2. Use Escalations. Here you can configure First / Last Notification and other related settings. This is available under "Alerting"
+     2. Use Escalations. Here you can configure First / Last Notification and other related settings. This is available under "Configure > Core Config Manager > Alerting"
