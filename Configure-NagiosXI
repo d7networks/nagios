@@ -1,6 +1,6 @@
 # Nagios XI and D7SMS Plugin configuration
 
-Python script for sending SMS notifications from Nagios using D7SMS Gateway.
+Python script for sending SMS notifications from NagiosXI using D7SMS Gateway.
 
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in Nagios
