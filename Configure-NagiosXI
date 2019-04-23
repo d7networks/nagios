@@ -14,11 +14,11 @@ Please contact nagios@d7networks.com or signup at https://d7networks.com for FRE
 ## Installation Instructions
 1. Nagios Setup
 
-Copy d7sms.py to your nagios plugins folder and make it executable. You can download it from https://github.com/d7networks/nagios/blob/master/d7sms.py 
+Copy d7sms.py to your nagios plugins folder and make it executable
 
 ```
 cd /usr/local/nagios/libexec/
-https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
+wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
 chmod +x d7sms.py
 ```
 
