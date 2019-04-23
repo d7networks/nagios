@@ -90,6 +90,9 @@ For all queries and help on installation please contact nagios@d7networks.com or
 Q1: How to Limit number of notifications: 
 
 Ans: There are two options you can follow to limit the notifications: 
+     
      1. Setting the notification_interval directive in either the host or service definitions to 0. Doing this tells Nagios not to resend notifications for the same event. 
+     
      2. Use Escalations. Here you can configure First / Last Notification and other related settings. This is available under "Alerting"
 
+![alt text](https://d7networks.com/images/newlogo.png)
