@@ -56,6 +56,7 @@ Select host-notify-by-sms and click on Add selected
 Click on generic contact/xi_contact_generic > Alert Settings > Manage service notification command
 Select service-notify-by-sms and click on Add selected
 ```
+![alt text](https://d7networks.com/images/nagios/NagiosXI-2.png)
 
 
 5. Add contact to templates Used: 
@@ -68,6 +69,7 @@ Click on the template used > Alert Settings > Manage Contacts > Select and add y
 Navigate to Configure > Core Config Manager > Templates > Service Templates
 Click on the template used > Alert Settings > Manage Contacts > Select and add your contact from the list
 ```
+![alt text](https://d7networks.com/images/nagios/NagiosXI-3.png)
 
 
 6. Add pager number
@@ -78,6 +80,7 @@ Navigate to Configure > Core Config Manager > Alerting > Contacts
 
 Select your contact > Add pager number and save
 ```
+![alt text](https://d7networks.com/images/nagios/NagiosXI-4.png)
 
 ## Support and Help
 
