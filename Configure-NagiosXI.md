@@ -20,12 +20,12 @@ wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
 chmod +x d7sms.py
 ```
 
-###### 2. Test extension
+#### 2. Test extension
 ```
 ./d7sms.py --username API_Username --password API_Password --to Mobile_Number --content "test"
 ```
 
-###### 3. Add notification commands
+#### 3. Add notification commands
 
 Procedure: On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
 Important: Here you must replace API_Username and API_Password with the one you recieved from our website.    
@@ -43,7 +43,7 @@ Status:   Enabled
 ```
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png)
 
-4. Update contact templates: 
+#### 4. Update contact templates: 
 
 Procedure: 
 Navigate to following path and add host, service notification commands to Assigned group for the templates you are using
@@ -59,7 +59,7 @@ Select service-notify-by-sms and click on Add selected
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-2.png)
 
 
-5. Add contact to templates Used: 
+#### 5. Add contact to templates Used: 
 
 ```
 Procedure: 
@@ -72,7 +72,7 @@ Click on the template used > Alert Settings > Manage Contacts > Select and add y
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-3.png)
 
 
-6. Add pager number
+#### 6. Add pager number
 ```
 Procedure: 
 
