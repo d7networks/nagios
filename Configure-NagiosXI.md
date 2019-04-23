@@ -78,7 +78,7 @@ Procedure:
 Navigate to Configure > Core Config Manager > Alerting > Contacts
 
 Select your contact > Add pager number and save
-
+```
 
 ## Support and Help
 
