@@ -41,6 +41,7 @@ Command Line:   $USER1$/d7sms.py --username API_Username --password API_Password
 Command Type:   misc command
 Status:   Enabled
 ```
+![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png)
 
 4. Update contact templates: 
 
