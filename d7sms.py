@@ -62,6 +62,8 @@ if __name__ == '__main__':
         from urllib.request import urlopen
         from urllib.parse import urlencode
     args = parser.parse_args()
+    print("Arguments received:")
+    print(args)
     if not (args.username and  args.password and args.to and args.content) :
         print("--username, --password ,--to and --content arguments are required to send sms")
     else:
