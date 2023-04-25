@@ -7,7 +7,7 @@ These instructions will get you a copy of the script and configuration guideline
 
 ## Prerequisites
 
-1. Signup at [https://app.d7networks.com.](https://app.d7networks.com/) and  verify account with mobile number
+1. Signup at [https://app.d7networks.com](https://app.d7networks.com/) and  verify account with mobile number
 2. Navigate to Developer > Application > Create App
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
