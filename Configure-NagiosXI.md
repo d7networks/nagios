@@ -24,7 +24,7 @@ chmod +x d7sms.py
 
 #### 2. Test extension
 ```
-./d7sms.py --username API_Username --password API_Password --to Mobile_Number --content "test"
+./d7sms.py --to Mobile_Number --content "test"
 ```
 
 #### 3. Add notification commands
@@ -34,12 +34,12 @@ Important: Here you must replace API_Username and API_Password with the one you 
 Configure > Core Config Manager > Commands > Add new
 ```
 Command Name:   service-notify-by-sms
-command Line:   $USER1$/d7sms.py --username API_Username --password API_Password --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
+command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
 Command Type:   misc command
 Status:   Enabled
 
 Command Name:   host-notify-by-sms
-Command Line:   $USER1$/d7sms.py --username API_Username --password API_Password --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
+Command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
 Command Type:   misc command
 Status:   Enabled
 ```
