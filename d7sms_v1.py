@@ -51,7 +51,7 @@ import urllib.request
 GW_URL = "https://api.d7networks.com/messages/v1/send"
 
 # can be generated from https://app.d7networks.com/developer/applications'
-D7TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiMzA5NzAwM2MtZjE2My00ODM0LTliODYtNzI0ZWJhNGNjNzBhIn0.XOvVnJimiVogSo3tQPAwm9e5K4_ihQKsbehiNRYDrzI"
+D7TOKEN = "YOUR_D7_TOKEN"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--source_address', help='SMS sender name, eg: nag-alert')
