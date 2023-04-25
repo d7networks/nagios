@@ -9,15 +9,15 @@ These instructions will get you a copy of the script and configuration guideline
 
 1. Signup at [https://app.d7networks.com.](https://app.d7networks.com/) and  verify account with mobile number
 2. Navigate to Developer > Application > Create App
-3. Once the application is created, click on "Generate Token"
+3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
 Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
 ## Installation Instructions
 1. Nagios Setup
-
-
-Copy d7sms.py to your nagios plugins folder and make it executable. You can download it from https://github.com/d7networks/nagios/blob/master/d7sms.py 
+        a. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
+        b. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
+        c. Copy d7sms.py to your nagios plugins folder and make it executable
 
 ```
 Following the location of plugins folder in different Operating Systems. 
@@ -34,11 +34,11 @@ You can collect your API_Username and API_Password from https://d7networks.com a
    Default path : /usr/local/nagios/etc/objects/commands.cfg
    define command{
        command_name    service-notify-by-sms
-       command_line    $USER1$/d7sms.py --username API_Username --password API_Password --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
+       command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
    }
    define command{
            command_name    host-notify-by-sms
-           command_line    $USER1$/d7sms.py --username API_Username --password API_Password --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
+           command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
        }
 ```
 
