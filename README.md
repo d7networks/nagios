@@ -14,13 +14,9 @@ These instructions will get you a copy of the script and configuration guideline
 Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
 ## Installation Instructions
-1. Nagios Setup
-
-Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
-
-Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
-
-Copy d7sms.py to your nagios plugins folder and make it executable
+1. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
+2. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
+3. Copy d7sms.py to your nagios plugins folder and make it executable
 
 ```
 Following the location of plugins folder in different Operating Systems. 
@@ -30,7 +26,7 @@ Centos: /usr/lib/nagios/plugins (32 bit)
         /usr/lib64/nagios/plugins (64 bit)
 ```
 
-2. Create commands for SMS notification (Service notification and also host notification).
+4. Create commands for SMS notification (Service notification and also host notification).
 You can collect your API_Username and API_Password from https://d7networks.com and use it in the below commands. 
 
 ```
@@ -46,7 +42,7 @@ You can collect your API_Username and API_Password from https://d7networks.com a
 ```
 
 
-3. Update contact template and add below commands after existing host and service notification commands.
+5. Update contact template and add below commands after existing host and service notification commands.
 
 ```
    Default path : /usr/local/nagios/etc/objects/templates.cfg
@@ -54,7 +50,7 @@ You can collect your API_Username and API_Password from https://d7networks.com a
        host_notification_commands      notify-host-by-email,host-notify-by-sms
 ```
 
-4. Add a pager number to your contacts, make sure it has the international prefix
+6. Add a pager number to your contacts, make sure it has the international prefix
 
 ## Support and Help
 
