@@ -7,7 +7,9 @@ These instructions will get you a copy of the script and configuration guideline
 
 ## Prerequisites
 
-Before starting nagios setup Copy d7sms.py to nagios plugin folder make sure you have a valid subscription on https://d7networks.com. 
+1. Signup at [https://app.d7networks.com.](https://app.d7networks.com/) and  verify account with mobile number
+2. Navigate to Developer > Application > Create App
+3. Once the application is created, click on "Generate Token"
 
 Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
