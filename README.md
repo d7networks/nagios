@@ -8,49 +8,79 @@ These instructions will get you a copy of the script and configuration guideline
 ## Prerequisites
 
 1. Signup at [https://app.d7networks.com](https://app.d7networks.com/) and  verify account with mobile number
-2. Navigate to Developer > Application > Create App
+2. Navigate to API Tokens > Create App
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
-Please contact support@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
-
 ## Installation Instructions
-1. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
-2. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
-3. Copy d7sms.py to your nagios plugins folder and make it executable
-
+1. Navigate to plugins folder on Nagios/Icinga Server
 ```
-Following the location of plugins folder in different Operating Systems. 
+        Following the location of plugins folder in different Operating Systems. 
 
-Debian/Ubuntu: /usr/local/nagios/libexec
-Centos: /usr/lib/nagios/plugins (32 bit)
-        /usr/lib64/nagios/plugins (64 bit)
+        Debian/Ubuntu: /usr/local/nagios/libexec
+        Centos: /usr/lib/nagios/plugins (32 bit)
+                /usr/lib64/nagios/plugins (64 bit)
 ```
-
-4. Create commands for SMS notification (Service notification and also host notification).
-You can collect your API_Username and API_Password from https://d7networks.com and use it in the below commands. 
-
+2. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
+3. Make it executable
 ```
-   Default path : /usr/local/nagios/etc/objects/commands.cfg
-   define command{
-       command_name    service-notify-by-sms
-       command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
-   }
-   define command{
-           command_name    host-notify-by-sms
-           command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
-       }
+        cd /usr/local/nagios/libexec
+        wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
+        chmod +x d7sms.py
+```
+4. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
+```
+        vim d7sms.py +54
 ```
 
+5. Create notification commands.
+    
+    Create for both Service and Host notifications. 
 
-5. Update contact template and add below commands after existing host and service notification commands.
+    Default path : /usr/local/nagios/etc/objects/commands.cfg
+```
+   
+        define command{
+            command_name    service-notify-by-sms
+            command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
+        }
+        define command{
+                command_name    host-notify-by-sms
+                command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
+            }
+```
+
+
+6. Update contact template 
+
+    Add below commands to templates. 
+    
+    Default path : /usr/local/nagios/etc/objects/templates.cfg
+```
+        service_notification_commands   notify-service-by-email,service-notify-by-sms
+        host_notification_commands      notify-host-by-email,host-notify-by-sms
+```
+
+7. Add a pager number to your contacts. 
+        
+    This will be used as sms destination number
+    
+    Make sure it has the international prefix (country code)
+    
+    Default path : /usr/local/nagios/etc/objects/contacts.cfg
 
 ```
-   Default path : /usr/local/nagios/etc/objects/templates.cfg
-   service_notification_commands   notify-service-by-email,service-notify-by-sms
-       host_notification_commands      notify-host-by-email,host-notify-by-sms
+        define contact {
+            contact_name            nagiosadmin
+            use                     generic-contact
+            alias                   Nagios Admin
+            email                   xyz@d7networks.com
+            pager                   +9715097526xx
+        }
 ```
 
-6. Add a pager number to your contacts, make sure it has the international prefix
+8. Check configurations and restart Nagios
+
+9. Also, you can check the /usr/local/nagios/nagios.log, in case if you need to check for errors
 
 ## Support and Help
 
