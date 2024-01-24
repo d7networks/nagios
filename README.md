@@ -83,6 +83,6 @@ These instructions will get you a copy of the script and configuration guideline
 
 You can get the latest version of this script from https://github.com/d7networks/nagios 
 
-For all queries and help on installation please contact nagios@d7networks.com or visit https://d7networks.com
+For all queries and help on installation please contact support@d7networks.com or visit https://d7networks.com
 
 Setup instructions for NagiosXI can be found here: https://github.com/d7networks/nagios/blob/master/Configure-NagiosXI.md

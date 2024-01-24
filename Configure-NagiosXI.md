@@ -7,24 +7,25 @@ These instructions will get you a copy of the script and configuration guideline
 
 ## Prerequisites
 
-1. Signup at [https://app.d7networks.com.](https://app.d7networks.com/) and  verify account with mobile number
-2. Navigate to Developer > Application > Create App
+1. Signup at [https://app.d7networks.com](https://app.d7networks.com/) and  verify account with mobile number
+2. Navigate to API Tokens > Create App
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
 ## Installation Instructions
 #### 1. Prepare 
-1. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
-2. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
-3. Copy d7sms.py to your nagios plugins folder and make it executable
+1. Navigate to plugins folder on NagiosXI Server
+2. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
+3. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
+4. Make it executable
 ```
-cd /usr/local/nagios/libexec/
-wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
-chmod +x d7sms.py
+          cd /usr/local/nagios/libexec/
+          wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
+          chmod +x d7sms.py
 ```
 
 #### 2. Test extension
 ```
-./d7sms.py --to Mobile_Number --content "test"
+          ./d7sms.py --to Mobile_Number --content "test"
 ```
 
 #### 3. Add notification commands
