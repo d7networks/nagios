@@ -13,7 +13,7 @@ These instructions will get you a copy of the script and configuration guideline
 
 ## Installation Instructions
 
-#### 1. Download script and configure Token
+### Download script and configure Token
 
 1. Navigate to plugins folder on Nagios/Icinga Server
 ```
@@ -34,14 +34,14 @@ These instructions will get you a copy of the script and configuration guideline
 ```
         vim d7sms.py +54
 ```
-#### 2. Test the script
+### Test the script
 (Remeber to replace the destination number)
 
 ```
         ./d7sms.py --to 9715097526xx --content "Test message from Nagios"
 ```
 
-#### 3. Modify Nagios configs
+### Modify Nagios configs
 
 1. Create notification commands.
     
