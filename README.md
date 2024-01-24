@@ -38,7 +38,6 @@ These instructions will get you a copy of the script and configuration guideline
 
     Default path : /usr/local/nagios/etc/objects/commands.cfg
 ```
-   
         define command{
             command_name    service-notify-by-sms
             command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
@@ -62,9 +61,7 @@ These instructions will get you a copy of the script and configuration guideline
 
 7. Add a pager number to your contacts. 
         
-    This will be used as sms destination number
-    
-    Make sure it has the international prefix (country code)
+    This will be used as sms destination number. Make sure it has the international prefix (country code)
     
     Default path : /usr/local/nagios/etc/objects/contacts.cfg
 
