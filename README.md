@@ -11,7 +11,7 @@ These instructions will get you a copy of the script and configuration guideline
 2. Navigate to Developer > Application > Create App
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
-Please contact nagios@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
+Please contact support@d7networks.com or signup at https://d7networks.com for FREE sms credits. 
 
 ## Installation Instructions
 1. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
