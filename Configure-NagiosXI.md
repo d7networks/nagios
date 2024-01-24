@@ -12,7 +12,7 @@ These instructions will get you a copy of the script and configuration guideline
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
 ## Installation Instructions
-### Prepare 
+### 1. Prepare 
 1. Navigate to plugins folder on NagiosXI Server
 2. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
 3. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
@@ -23,14 +23,14 @@ These instructions will get you a copy of the script and configuration guideline
           chmod +x d7sms.py
 ```
 
-### Test the script
+### 2. Test the script
 (Remeber to replace the destination number)
 
 ```
         ./d7sms.py --to 9715097526xx --content "Test message from Nagios"
 ```
 
-### Add notification commands
+### 3. Add notification commands
 
 On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
 
@@ -39,16 +39,16 @@ Configure > Core Config Manager > Commands > Add new
 Command Name:   service-notify-by-sms
 command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
 Command Type:   misc command
-Status:   Enabled
+Status:   Enabled (Active)
 
 Command Name:   host-notify-by-sms
 Command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
 Command Type:   misc command
-Status:   Enabled
+Status:   Enabled (Active)
 ```
 <!-- ![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png) -->
 
-### Update contact templates: 
+### 4. Update contact templates: 
 
 Navigate to following path and add host, service notification commands to Assigned group for the templates you are using
 
@@ -63,7 +63,7 @@ Select service-notify-by-sms and click on Add selected
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-2.png)
 
 
-### Add contact to templates Used: 
+### 5. Add contact to templates Used: 
 
 ```
 Navigate to Configure > Core Config Manager > Templates > Host Templates
@@ -75,7 +75,7 @@ Click on the template used > Alert Settings > Manage Contacts > Select and add y
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-3.png)
 
 
-### Add pager number
+### 6. Add pager number
 ```
 Navigate to Configure > Core Config Manager > Alerting > Contacts
 
