@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # coding=utf-8
 
 # Before starting nagios setup Copy d7sms.py to Nagios plugin folder make sure you have a valid subscription on https://d7networks.com.
