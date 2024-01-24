@@ -12,6 +12,9 @@ These instructions will get you a copy of the script and configuration guideline
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
 ## Installation Instructions
+
+#### 1. Download script and configure Token
+
 1. Navigate to plugins folder on Nagios/Icinga Server
 ```
         Following the location of plugins folder in different Operating Systems. 
@@ -31,25 +34,32 @@ These instructions will get you a copy of the script and configuration guideline
 ```
         vim d7sms.py +54
 ```
+#### 2. Test the script
+(Remeber to replace the destination number)
 
-5. Create notification commands.
+```
+        ./d7sms.py --to 9715097526xx --content "Test message from Nagios"
+```
+
+#### 3. Modify Nagios configs
+
+1. Create notification commands.
     
     Create for both Service and Host notifications. 
 
     Default path : /usr/local/nagios/etc/objects/commands.cfg
 ```
-        define command{
-            command_name    service-notify-by-sms
-            command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
+define command{
+        command_name    service-notify-by-sms
+        command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$:$SERVICEDESC$ on $HOSTNAME$ with IP $HOSTADDRESS$ Current State $SERVICESTATE$ Service Info: $SERVICEOUTPUT$ Date: $LONGDATETIME$"
+}
+define command{
+        command_name    host-notify-by-sms
+        command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
         }
-        define command{
-                command_name    host-notify-by-sms
-                command_line    $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYPE$: Host: $HOSTNAME$, State: $HOSTSTATE$, Address: $HOSTADDRESS$, Info: $HOSTOUTPUT$, Date/Time: $LONGDATETIME$"
-            }
 ```
 
-
-6. Update contact template 
+2. Update contact template 
 
     Add below commands to templates. 
     
@@ -59,7 +69,7 @@ These instructions will get you a copy of the script and configuration guideline
         host_notification_commands      notify-host-by-email,host-notify-by-sms
 ```
 
-7. Add a pager number to your contacts. 
+3. Add a pager number to your contacts. 
         
     This will be used as sms destination number. Make sure it has the international prefix (country code)
     
@@ -75,9 +85,9 @@ These instructions will get you a copy of the script and configuration guideline
         }
 ```
 
-8. Check configurations and restart Nagios
+4. Check configurations and restart Nagios
 
-9. Also, you can check the /usr/local/nagios/nagios.log, in case if you need to check for errors
+5. Also, you can check the /usr/local/nagios/nagios.log, in case if you need to check for errors
 
 ## Support and Help
 

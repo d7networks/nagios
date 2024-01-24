@@ -23,15 +23,17 @@ These instructions will get you a copy of the script and configuration guideline
           chmod +x d7sms.py
 ```
 
-#### 2. Test extension
+#### 2. Test the script
+(Remeber to replace the destination number)
+
 ```
-          ./d7sms.py --to Mobile_Number --content "test"
+        ./d7sms.py --to 9715097526xx --content "Test message from Nagios"
 ```
 
 #### 3. Add notification commands
 
-Procedure: On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
-Important: Here you must replace API_Username and API_Password with the one you recieved from our website.    
+On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
+
 Configure > Core Config Manager > Commands > Add new
 ```
 Command Name:   service-notify-by-sms
@@ -44,11 +46,10 @@ Command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYP
 Command Type:   misc command
 Status:   Enabled
 ```
-![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png)
+<!-- ![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png) -->
 
 #### 4. Update contact templates: 
 
-Procedure: 
 Navigate to following path and add host, service notification commands to Assigned group for the templates you are using
 
 ```
@@ -65,7 +66,6 @@ Select service-notify-by-sms and click on Add selected
 #### 5. Add contact to templates Used: 
 
 ```
-Procedure: 
 Navigate to Configure > Core Config Manager > Templates > Host Templates
 Click on the template used > Alert Settings > Manage Contacts > Select and add your contact from the list
 
@@ -77,8 +77,6 @@ Click on the template used > Alert Settings > Manage Contacts > Select and add y
 
 #### 6. Add pager number
 ```
-Procedure: 
-
 Navigate to Configure > Core Config Manager > Alerting > Contacts
 
 Select your contact > Add pager number and save
@@ -89,7 +87,7 @@ Select your contact > Add pager number and save
 
 You can get the latest version of this script from https://github.com/d7networks/nagios 
 
-For all queries and help on installation please contact nagios@d7networks.com or visit https://d7networks.com
+For all queries and help on installation please contact support@d7networks.com or visit https://d7networks.com
 
 ## Common queries and solutions: 
 Q1: How to Limit number of notifications: 
