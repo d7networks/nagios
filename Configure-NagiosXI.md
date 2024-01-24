@@ -12,7 +12,7 @@ These instructions will get you a copy of the script and configuration guideline
 3. Once the application is created, click on "Generate Token" and this token needs to be added in d7sms.py file. 
 
 ## Installation Instructions
-#### 1. Prepare 
+### Prepare 
 1. Navigate to plugins folder on NagiosXI Server
 2. Download d7sms.py from [https://github.com/d7networks/nagios/blob/master/d7sms.py](https://github.com/d7networks/nagios/blob/master/d7sms.py)
 3. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
@@ -23,14 +23,14 @@ These instructions will get you a copy of the script and configuration guideline
           chmod +x d7sms.py
 ```
 
-#### 2. Test the script
+### Test the script
 (Remeber to replace the destination number)
 
 ```
         ./d7sms.py --to 9715097526xx --content "Test message from Nagios"
 ```
 
-#### 3. Add notification commands
+### Add notification commands
 
 On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
 
@@ -48,7 +48,7 @@ Status:   Enabled
 ```
 <!-- ![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png) -->
 
-#### 4. Update contact templates: 
+### Update contact templates: 
 
 Navigate to following path and add host, service notification commands to Assigned group for the templates you are using
 
@@ -63,7 +63,7 @@ Select service-notify-by-sms and click on Add selected
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-2.png)
 
 
-#### 5. Add contact to templates Used: 
+### Add contact to templates Used: 
 
 ```
 Navigate to Configure > Core Config Manager > Templates > Host Templates
@@ -75,7 +75,7 @@ Click on the template used > Alert Settings > Manage Contacts > Select and add y
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-3.png)
 
 
-#### 6. Add pager number
+### Add pager number
 ```
 Navigate to Configure > Core Config Manager > Alerting > Contacts
 
