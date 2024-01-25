@@ -33,7 +33,7 @@ These instructions will get you a copy of the script and configuration guideline
 
 ### 3. Add notification commands
 
-On Nagios XI  - GUI, Navigate to following path and add two commands seperately.   
+On Nagios XI  - GUI, Navigate to following path and add service and host notification commands.   
 
 Configure > Core Config Manager > Commands > Add new
 ```
@@ -86,6 +86,7 @@ Navigate to Configure > Core Config Manager > Alerting > Contacts
 Select your contact > Add pager number and save
 ```
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-4.png)
+
 
 ## Support and Help
 
