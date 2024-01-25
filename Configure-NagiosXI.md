@@ -21,6 +21,7 @@ These instructions will get you a copy of the script and configuration guideline
           cd /usr/local/nagios/libexec/
           wget https://raw.githubusercontent.com/d7networks/nagios/master/d7sms.py
           chmod +x d7sms.py
+          vim d7sms.py +12
 ```
 
 ### 2. Test the script
@@ -46,7 +47,10 @@ Command Line:   $USER1$/d7sms.py --to $CONTACTPAGER$ --content "$NOTIFICATIONTYP
 Command Type:   misc command
 Status:   Enabled (Active)
 ```
-<!-- ![alt text](https://d7networks.com/images/nagios/NagiosXI-1.png) -->
+![alt text](https://d7networks.com/images/nagios/NagiosXI-1-1.png)
+
+![alt text](https://d7networks.com/images/nagios/NagiosXI-1-2.png)
+
 
 ### 4. Update contact templates: 
 
@@ -54,10 +58,10 @@ Navigate to following path and add host, service notification commands to Assign
 
 ```
 Configure > Core Config Manager > Templates > Contact Templates
-Click on generic contact/xi_contact_generic > Alert Settings > Manage host notification command 
+Click on generic contact/xi_contact_generic > Alert Settings > "Manage host notification command" 
 Select host-notify-by-sms and click on Add selected
  
-Click on generic contact/xi_contact_generic > Alert Settings > Manage service notification command
+Then click on "Manage service notification command" on the same window
 Select service-notify-by-sms and click on Add selected
 ```
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-2.png)
@@ -69,7 +73,7 @@ Select service-notify-by-sms and click on Add selected
 Navigate to Configure > Core Config Manager > Templates > Host Templates
 Click on the template used > Alert Settings > Manage Contacts > Select and add your contact from the list
 
-Navigate to Configure > Core Config Manager > Templates > Service Templates
+Click on "Service Templates" on the same page. 
 Click on the template used > Alert Settings > Manage Contacts > Select and add your contact from the list
 ```
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-3.png)

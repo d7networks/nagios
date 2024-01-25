@@ -32,7 +32,7 @@ These instructions will get you a copy of the script and configuration guideline
 ```
 4. Replace "YOUR_D7_TOKEN" in the file with the token you have created earlier. 
 ```
-        vim d7sms.py +54
+        vim d7sms.py +12
 ```
 ### Test the script
 (Remeber to replace the destination number)
