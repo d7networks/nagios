@@ -90,7 +90,7 @@ Select your contact > Add pager number and save
 -----------------
 ### Video documentation
 
-[![Watch the video](https://d7networks.com/images/zabbix/Zabbix-Video.png)](https://youtu.be/Oa0LRMqsZ3Y)
+[![Watch the video](https://d7networks.com/images/nagios/NagiosXI-Video.png)](https://youtu.be/Oa0LRMqsZ3Y)
 
 -----------------
 
