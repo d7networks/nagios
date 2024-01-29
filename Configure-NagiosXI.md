@@ -87,6 +87,12 @@ Select your contact > Add pager number and save
 ```
 ![alt text](https://d7networks.com/images/nagios/NagiosXI-4.png)
 
+-----------------
+### Video documentation
+
+[![Watch the video](https://d7networks.com/images/zabbix/Zabbix-Video.png)](https://youtu.be/Oa0LRMqsZ3Y)
+
+-----------------
 
 ## Support and Help
 
